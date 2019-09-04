@@ -125,26 +125,6 @@ npm install
 
 This command will read the [package.json](package.json) and install all the required dependencies to the [node_modules](node_modules) folder.
 
-### Resources
-
-To be able to add platforms (Android and iOS) and build the application for the distributed platforms.
-
-```bash
-ionic cordova resources
-```
-
-By running this command, the [icon.png](resources/icon.png) and the [splash.png](resources/splash.png) will be uploaded to the Ionic platform and then will download the transformed resource images.
-
-**_An Ionic account is necessary to run this command and you may need to create one at [https://apps.ionic.io/signup](https://apps.ionic.io/signup)_**
-
-## Development
-
-The [official docs can be found here](http://ionicframework.com/docs/) for complementary information.
-
-**_IT'S MANDATORY FOR DEVELOPERS TO MASTER THE ANGULAR ARCHITECTURE CONCEPTS SINCE PERFORMANCE AND SCALABILITY OF THE APPLICATION WILL DEPEND ON THIS KNOWLEDGE._**
-
-You can read in depth about the [Angular Architecture here](https://angular.io/guide/architecture).
-
 ### Serve
 
 Use ionic serve to start a local development server for app dev and testing. This is useful for both desktop browser testing, and to test within a device browser which is connected to the same network. Additionally, this command starts LiveReload which is used to monitor changes in the file system. As soon as you save a file the browser is refreshed automatically.
