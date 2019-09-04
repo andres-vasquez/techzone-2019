@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            {{'live.title' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-text color="dark">
+                <p text-wrap>{{'live.instructions'|translate}}</p>
+            </ion-text>
+            <ion-item>
+                <ion-label>{{($time | async) | date:'dd-MM-yyyy HH:mm:ss'}}</ion-label>
+                <ion-datetime displayFormat="HH:mm" min="09:30" max="20:30"
+                              (ionChange)="updateMyDate($event)"></ion-datetime>
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content *ngIf="item">
+            <ion-item>
+                <ion-rating [rate]="item.stars"
+                            readonly="true"
+                            size="default">
+                </ion-rating>
+                <ion-label>
+                    <ion-text class="stars-counter">
+                        ({{item.stars | number: '1.2-2'}})
+                    </ion-text>
+                </ion-label>
+
+                <ion-label text-right>
+                    <ion-text color="danger">
+                        <p text-wrap>{{'live.votes'|translate}}{{item.votes}}</p>
+                    </ion-text>
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-avatar slot="start">
+                    <img src="{{item.image}}"/>
+                </ion-avatar>
+                <ion-label>
+                    <ion-text color="primary">
+                        <h3 text-wrap>{{item.title}}</h3>
+                    </ion-text>
+                    <p text-wrap>{{item.speakerName}}</p>
+
+                    <ion-text color="dark">
+                        <p>{{getCategory(item.category)}}</p>
+                    </ion-text>
+
+                    <ion-text color="danger">
+                        <p>{{item.time.init | date: 'HH:mm'}}
+                            - {{item.time.end | date: 'HH:mm'}}</p>
+                    </ion-text>
+                </ion-label>
+                <ion-icon item-right color="success" [name]="getIconByType(item.type)"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <p text-wrap [innerHTML]="item.description"></p>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+    <ion-row>
+        <ion-col>
+            <ion-button
+                    color="primary" expand="block" fill="outline"
+                    [disabled]="!item"
+                    (click)="sendFeedback(item.id)">
+                {{'live.feedback.button' | translate}}
+            </ion-button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

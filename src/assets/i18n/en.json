@@ -1,0 +1,27 @@
+{
+  "global": {
+    "loading": "loading"
+  },
+  "schedule": {
+    "title": "Schedule",
+    "type": {
+      "basic": "Basic",
+      "intermediate": "Intermediate",
+      "upper_intermediate": "Upper Intermediate",
+      "advanced": "Advanced"
+    }
+  },
+  "live": {
+    "title": "Live",
+    "votes": "Votes: ",
+    "instructions": "Select time to see the Live Agenda",
+    "feedback": {
+      "title": "Feedback",
+      "button": "Send fake Feedback",
+      "ok": "- Test Feedback sent successfully"
+    }
+  },
+  "about": {
+    "title": "About"
+  }
+}

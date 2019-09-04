@@ -1,0 +1,7 @@
+{
+  "name": "techZone",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
