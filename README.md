@@ -7,6 +7,9 @@ Andrés Vasquez Agramont
 
 [https://github.com/andres-vasquez](https://github.com/andres-vasquez)
 
+### Presentation Slides
+https://drive.google.com/file/d/1ABun8Ot6Tgo12yaf_0A0oS6NRMLSVv4T/view?usp=sharing
+
 
 ## Development Requirements
 
